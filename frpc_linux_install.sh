@@ -9,9 +9,9 @@ mkdir -p /root/frp && \
 wget -P ${WORK_PATH} https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz && \
 tar -zxvf frp_${FRP_VERSION}_linux_amd64.tar.gz && \
 cd frp_${FRP_VERSION}_linux_amd64 && \
-mv frps /root/frp && \
-# 下载frps.in和frps.service
-wget -P /root/frp https://raw.githubusercontent.com/${REPO}/master/frps.ini && \
+mv frpc /root/frp && \
+# 下载frpc.in和frpc.service
+wget -P /root/frp https://raw.githubusercontent.com/${REPO}/master/frpc.ini && \
 wget -P /lib/systemd/system https://raw.githubusercontent.com/${REPO}/master/frpc.service && \
 systemctl daemon-reload && \
 # 启动frps
