@@ -1,17 +1,16 @@
 #!/bin/sh
 FRP_VERSION="0.32.1"
-REPO="eddiechen2011/frps"
+REPO="stilleshan/frps"
 WORK_PATH=$(dirname $(readlink -f $0))
 
 # 创建frp文件夹
 mkdir -p /root/frp && \
-cd /root/frp
 # 下载并移动frps文件
 wget -P ${WORK_PATH} https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz && \
 tar -zxvf frp_${FRP_VERSION}_linux_amd64.tar.gz && \
 cd frp_${FRP_VERSION}_linux_amd64 && \
 mv frpc /root/frp && \
-# 下载frpc.in和frpc.service
+# 下载frps.in和frps.service
 wget -P /root/frp https://raw.githubusercontent.com/${REPO}/master/frpc.ini && \
 wget -P /lib/systemd/system https://raw.githubusercontent.com/${REPO}/master/frpc.service && \
 systemctl daemon-reload && \
