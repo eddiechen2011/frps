@@ -1,7 +1,7 @@
 #!/bin/sh
 FRP_VERSION="0.32.1"
 REPO="eddiechen2011/frps"
-WORK_PATH=$(dirname $(readlink -f $0))
+WORK_PATH="/root/frp"
 
 # 创建frp文件夹
 mkdir -p /root/frp && \
