@@ -5,6 +5,7 @@ WORK_PATH=$(dirname $(readlink -f $0))
 
 # 创建frp文件夹
 mkdir -p /root/frp && \
+cd /root/frp
 # 下载并移动frps文件
 wget -P ${WORK_PATH} https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz && \
 tar -zxvf frp_${FRP_VERSION}_linux_amd64.tar.gz && \
