@@ -1,6 +1,6 @@
 #!/bin/sh
 FRP_VERSION="0.32.1"
-REPO="stilleshan/frps"
+REPO="eddiechen2011/frps"
 WORK_PATH=$(dirname $(readlink -f $0))
 
 # 创建frp文件夹
@@ -9,7 +9,7 @@ mkdir -p /usr/local/frp && \
 wget -P ${WORK_PATH} https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz && \
 tar -zxvf frp_${FRP_VERSION}_linux_amd64.tar.gz && \
 cd frp_${FRP_VERSION}_linux_amd64 && \
-mv frps /usr/local/frp && \
+mv frps /root/frp && \
 # 下载frps.in和frps.service
 wget -P /usr/local/frp https://raw.githubusercontent.com/${REPO}/master/frps.ini && \
 wget -P /lib/systemd/system https://raw.githubusercontent.com/${REPO}/master/frps.service && \
